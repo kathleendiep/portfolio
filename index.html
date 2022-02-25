@@ -1,2 +1,324 @@
-<h1>hi!</h1>
 
+<!DOCTYPE html>
+<style>
+body{
+    background-color:#FAC08E; 
+    color: white;
+}
+
+body a{
+    color: white;
+}
+
+header{
+  text-align: center;
+}
+
+/* BUTTON */
+.button {
+  background-color: white;
+  color: #FAC08E; 
+  cursor: pointer;
+  font-size: 20px;
+  margin: 10px auto;
+  padding: 0px 30px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 50px;
+}
+
+/* MENU TOP BAR */
+
+#menu-1 img {
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  max-width: 100%;
+  height: 50px;
+}
+
+#big-menu {
+  background-color: white;
+  color: black;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  top: 0;
+  opacity: 1;
+  overflow-y: scroll;
+  padding: 15px 30px;
+  position: fixed;
+  transition: all 0.45s ease-in-out;
+  transform: translateX(100%);
+  z-index: 10;
+}
+
+#big-menu.toggle-open {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+
+#big-menu a, #big-menu a:focus, #big-menu a:visited {
+  color: black;
+  display: block;
+  font-size: 50px;
+  margin: 25px auto;
+  text-align: center;
+  text-decoration: none;
+}
+#big-menu-close {
+  background-color: white;
+  color: darkred;
+}
+
+.headline{
+  align-items: center;
+  flex-direction: row;
+
+}
+
+.hello li{
+  margin: 0px -20px 0px 0px;
+
+} 
+
+/* MAIN BODY */
+main {
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+}
+/* ABOUT ME  */
+.kathleen {
+    background-repeat: no-repeat;
+    background-color: #ffd45d56; 
+}
+
+.profilepic{
+  border-radius: 50%;
+  top: 0px;
+  right: 0px;
+  max-width: 100%;
+  height: 300px;
+  border: 2px solid white;
+
+}
+
+
+.introduction {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+/* DIRECTORY */
+ul {
+ display:flex;
+ justify-content: space-around;
+ align-items: center;
+ flex-direction: row;
+
+
+}
+li {
+ display: inline;
+}
+
+
+nav {
+
+ background-color: grey;
+}
+
+/* PROJECTS  */
+
+.projects {
+  text-align: center;
+}
+.project-list{
+  display: flex;
+  justify-content: space-around;
+  border: 5px solid white;
+  margin: 0;
+  padding: 100px;
+}
+
+.project-item{
+  display: flex; 
+  justify-content: space-around;
+  flex-direction: column;
+  border: 2px solid white;
+  margin: 0 15px;
+  padding: 100px;
+  width: 500px;
+  height: 100px;
+}
+
+
+
+
+#project-button-1{
+  display: inline;
+  background-color: white;
+  color: #FAC08E; 
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0px 30px;
+  text-transform: uppercase;
+  text-align: center;
+  height: 100%;
+  width: 50px;
+}
+#project-item.hover-project{
+  background-color: red;
+}
+#personal-website{
+  background-color: white;
+  color: black;
+  opacity: 1;
+  overflow-y: scroll;
+  position: fixed;
+  transition: 0.45s ease-in;
+  transform: translateX(0);
+
+}
+#personal-website.toggle-open {
+  transform: translateY(100%);
+  opacity: 1;
+  position: relative;
+  padding: 15px 30px;
+}
+
+
+
+/* .active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
+</style>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathleen Diep</title>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+    <link href="styles.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+    <script type="text/javascript">
+     console.log('body')
+    </script>
+<header>
+  <section class="headline">
+    <ul class="hello">
+      <li class>software developer</li>
+      <li>teamplayer</a></li>
+      <li>entrepreneur</li>
+    </ul>
+
+
+   
+
+  <nav id ="menu-1">
+    <img class="menu-control" src="menu.png">
+  </nav>
+  </section>
+
+  <aside id="big-menu">
+  <a href="resume.html">Resume</a>
+  <a href="projects.html">Projects</a>
+  <a href="https://github.com/kathleendiep">Github</a>
+  <a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a>
+  <div class="button" id="big-menu-close">Close it</div>
+  </aside>      
+          
+</header>
+
+<main>
+  <section>
+  <div class="introduction">
+  <h1 class="animate__animated animate__backInLeft">Hello! My name is: <br>Kathleen! </h1>
+  <img class="animate__animated animate__bounceInRight profilepic" src ="./images/profilephoto.png">
+  </div>
+  </section>
+
+  <section class="about-me">
+    located in Bay Area, California - I am passionate problem solver!
+    <h3>let's connect!</h3> 
+    <nav>
+    <ul>
+    <li><a href="https://github.com/kathleendiep">Email</a></li>
+    <li><a href="https://github.com/kathleendiep">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a></li>
+    </ul>
+    </nav>
+  </section>
+</main>
+      <section class = "projects">
+        <h1> Check out my projects! </h1>
+        <ul class="project-list">
+          <li class="project-item">
+            <h1>developed my own website for my own business!</h1>
+            <div id="project-button-1">arrow!</div>
+            <div id="personal-website"> developed front end, html, css, etc </div>
+          </li>
+          <li class=" project-item">
+            create your own adventure game
+          </li>
+          <li class=" project-item">
+            terminal game
+          </li>
+        </ul>
+        <p class="button" id="menu-1">see more!</p> -->
+
+    
+      
+      
+
+      </section>
+
+  <div class="container reveal fade-bottom">
+  <h2>Caption</h2>
+  <div class="text-container">
+    <div class="text-box">
+      <h3>Section Text</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+        eius molestiae perferendis eos provident vitae iste.
+      </p>
+    </div>
+      <section class="resume">
+        <h1> resume </h1>
+      </section>
+      <section class="fun">
+        <h1> fun facts </h1>
+      </section>
+
+</body>
+</html>
