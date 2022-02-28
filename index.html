@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <style>
 body{
@@ -31,7 +31,7 @@ header{
 
 #menu-1 img {
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 0px;
   max-width: 100%;
   height: 50px;
@@ -72,11 +72,6 @@ header{
   color: darkred;
 }
 
-.headline{
-  align-items: center;
-  flex-direction: row;
-
-}
 
 .hello li{
   margin: 0px -20px 0px 0px;
@@ -84,26 +79,11 @@ header{
 } 
 
 /* MAIN BODY */
-main {
-   display:flex;
-   justify-content: space-around;
-   align-items: center;
-   flex-direction: column;
-}
+
 /* ABOUT ME  */
 .kathleen {
     background-repeat: no-repeat;
     background-color: #ffd45d56; 
-}
-
-.profilepic{
-  border-radius: 50%;
-  top: 0px;
-  right: 0px;
-  max-width: 100%;
-  height: 300px;
-  border: 2px solid white;
-
 }
 
 
@@ -111,25 +91,123 @@ main {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  background-color: grey;
+  margin: 10px 20px 10px
 }
 
+@media (min-width: 500px) {
+  .introduction{
+    display: flex;
+    grid-template-columns: repeat(1fr, 1fr);
+    align-items: center;
+    border: 6px solid white;
+    grid-gap: -200px -200px;
+    margin: 10px 200px 15px 200px
+  }
+}
+.profilepic{
+  border-radius: 50%;
+  top: 0px;
+  right: 0px;
+  max-width: 100%;
+  height: 200px;
+  border: 2px solid white;
+
+}
+@media (min-width: 500px){
+  .profilepic{
+    border-radius: 50%;
+    top: 0px;
+    right: 0px;
+    max-width: 100%;
+    height:400px;
+  }
+}
+.goldengate{
+  top: 0px;
+  right: 0px;
+  margin: -70px;
+  max-width: 100%;
+  height: 200px;
+
+
+}
+
+
+
+
+
+
+
 /* DIRECTORY */
+
+nav {
+background-color: grey;
+border: 6px solid white;
+align-items: center;
+
+}
+
 ul {
- display:flex;
- justify-content: space-around;
- align-items: center;
- flex-direction: row;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+justify-content: space-around;
+align-items: center;
+flex-direction: row;
+
+grid-gap: 0px 10px; 
+
+
 
 
 }
 li {
+
  display: inline;
+
+}
+/* SKILLS  */
+
+.skills{
+  display: grid;  
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  grid-gap: 0px 10px; 
+
 }
 
 
-nav {
+#skills-button{
+  display: inline;
+  background-color: white;
+  color: #FAC08E; 
+  cursor: pointer;
+  font-size: 20px;
 
- background-color: grey;
+  text-transform: uppercase;
+  text-align: center;
+  height: 100px;
+
+}
+
+#skills-list{
+  background-color: white;
+  color: red;
+  opacity: 0;
+  overflow-y: scroll;
+  position: fixed;
+  transition: 0.45s ease-in;
+  transform: translateX(0);
+
+}
+#skills-list.toggle-open {
+  transform: translateY(100%);
+  opacity: 1;
+  position: relative;
+
+
 }
 
 /* PROJECTS  */
@@ -171,9 +249,7 @@ nav {
   height: 100%;
   width: 50px;
 }
-#project-item.hover-project{
-  background-color: red;
-}
+
 #personal-website{
   background-color: white;
   color: black;
@@ -191,21 +267,6 @@ nav {
   padding: 15px 30px;
 }
 
-
-
-/* .active.fade-bottom {
-  animation: fade-bottom 1s ease-in;
-}
-@keyframes fade-bottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-} */
 </style>
 
 <html lang="en">
@@ -235,51 +296,74 @@ nav {
      console.log('body')
     </script>
 <header>
-  <section class="headline">
-    <ul class="hello">
-      <li class>software developer</li>
-      <li>teamplayer</a></li>
-      <li>entrepreneur</li>
-    </ul>
+
+  <nav>
 
 
-   
+  <ul >
+  </ul>  
 
-  <nav id ="menu-1">
-    <img class="menu-control" src="menu.png">
-  </nav>
-  </section>
+ 
+    <div id ="menu-1">
+        <img src="menu.png">
+    </div>
 
-  <aside id="big-menu">
-  <a href="resume.html">Resume</a>
-  <a href="projects.html">Projects</a>
-  <a href="https://github.com/kathleendiep">Github</a>
-  <a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a>
-  <div class="button" id="big-menu-close">Close it</div>
-  </aside>      
-          
-</header>
+    <aside id="big-menu">
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+    <a href="https://github.com/kathleendiep">Github</a>
+    <a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a>
+    <div class="button" id="big-menu-close">Close it</div>
+    </aside>   
+
+  
+  </nav>   
+
 
 <main>
   <section>
   <div class="introduction">
-  <h1 class="animate__animated animate__backInLeft">Hello! My name is: <br>Kathleen! </h1>
+  <h1 class="animate__animated animate__backInLeft">Hello! My name is: <br>Kathleen Diep </h1>
   <img class="animate__animated animate__bounceInRight profilepic" src ="./images/profilephoto.png">
   </div>
   </section>
 
   <section class="about-me">
-    located in Bay Area, California - I am passionate problem solver!
+    <ul>
+      <li>problem solver </li>
+      <li>critical thinker</li>
+      <li>entrepreneur</li>
+    </ul>
+    <ul>
+      <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+      <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+      <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+    </ul>
+   
+
+    <p>located in Bay Area, California - I am passionate problem solver!</p>
+
     <h3>let's connect!</h3> 
-    <nav>
+
+  </section>
+
+  <nav>
+    <h1> Let's Connect!</h1>
     <ul>
     <li><a href="https://github.com/kathleendiep">Email</a></li>
     <li><a href="https://github.com/kathleendiep">Github</a></li>
     <li><a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a></li>
     </ul>
-    </nav>
-  </section>
+  </nav>
 </main>
+    <section>
+      <h1>SKILLS</h1>
+      <div class="skills">
+      <div id="skills-button">FRONTEND</div>
+      <div id="skills-button">BACKEND</div>
+      <div id="skills-list"> HTML, CSS, JAVASCRIPT </div>
+    </div>
+    </section>
       <section class = "projects">
         <h1> Check out my projects! </h1>
         <ul class="project-list">
