@@ -170,29 +170,6 @@ header{
   margin: 0px 0px 0px 0px;
 
 }
-/*
-@media (min-width: 480px) {
-  .introduction{
-    display: flex;
-    flex-direction: row;
-    grid-template-columns: repeat(1fr, 1fr);
-    align-items: center;
-    border: 6px solid white;
-    margin: 10px 200px 15px 200px
-  }
-}
-
-@media (min-width: 1200px) {
-  .introduction{
-    display: flex;
-    flex-direction: row;
-    grid-template-columns: repeat(1fr, 1fr);
-    align-items: center;
-    border: 6px solid white;
-    margin: 20px 300px 15px 300px
-  }
-} */
-
 
 
 /* DIRECTORY - body */
@@ -280,13 +257,41 @@ h1{
 .projects {
   text-align: center;
 }
+
 .project-list{
   display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-around;
   border: 5px solid white;
   margin: 0;
   padding: 100px;
 }
+
+@media (min-width: 480px) {
+  .introduction{
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(1fr, 1fr);
+    align-items: center;
+    border: 6px solid white;
+    margin: 10px 200px 15px 200px
+  }
+}
+
+@media (min-width: 1200px) {
+  .introduction{
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(1fr, 1fr);
+    align-items: center;
+    border: 6px solid white;
+    margin: 20px 300px 15px 300px
+  }
+} */
+
+
+
 
 .project-item{
   display: flex; 
@@ -348,9 +353,6 @@ h1{
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
     </script>
-
-
-
     <script src="app.js"></script>
 
     <link
@@ -361,112 +363,100 @@ h1{
 
 </head>
 
-<body>
-    <script type="text/javascript">
-     console.log('body')
-    </script>
-    
-<header>
-  <div id="header"></div>
-  <nav>
-    <div id ="menu-1">
-        <img src="menu.png">
-    </div>
-    <aside id="big-menu">
-    <a href="resume.html">Resume</a>
-    <a href="projects.html">Projects</a>
-    <a href="https://github.com/kathleendiep">Github</a>
-    <a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a>
-    <div class="button" id="big-menu-close">Close it</div>
-    </aside>   
-  </nav>  
-</header>
+  <body>
+      <script type="text/javascript">
+      console.log('body')
+      </script>
+      
+  <header>
+  </header>
 
 
-<main>
-  <section>
-  <div class="introduction">
-  <h2 class="animate__animated animate__backInLeft">Hello! my name is: <br> Kathleen Diep </h2><br>
-
-  <img class="animate__animated animate__bounceInRight profilepic" src ="./images/profilephoto.png">
-
-  </div>
-  </section>
-
-  <section>
-
-    <ul class="about-me">
-      <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
-      <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
-      <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
-    </ul>
-
-    <br>
-    <ul class="about-me">
-      <li>problem solver </li>
-      <li>critical thinker</li>
-      <li>entrepreneur</li>
-    </ul>
-    <p>located in Bay Area, California - I am passionate problem solver!</p>
-
-  </section>
-
-  <nav class="default-center">
-    <ul>
-    <li> <a href="mailto:kathleendiep@gmail.com">Email</a></li>
-    <li><a href="https://github.com/kathleendiep">Github</a></li>
-    <li><a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a></li>
-    </ul>
-  </nav>
-</main>
+  <main>
     <section>
-      <h1>SKILLS</h1>
-      <div class="skills">
-      <div id="skills-button">FRONTEND</div>
-      <div id="skills-button">BACKEND</div>
-      <div id="skills-list"> HTML, CSS, JAVASCRIPT </div>
+    <div class="introduction">
+    <h2 class="animate__animated animate__backInLeft">Hello! my name is: <br> Kathleen Diep </h2><br>
+
+    <img class="animate__animated animate__bounceInRight profilepic" src ="./images/profilephoto.png">
+
     </div>
     </section>
-      <section class = "projects">
-        <h1> Check out my projects! </h1>
-        <ul class="project-list">
-          <li class="project-item">
-            <h1>developed my own website for my own business!</h1>
-            <div id="project-button-1">arrow!</div>
-            <div id="personal-website"> developed front end, html, css, etc </div>
-          </li>
-          <li class=" project-item">
-            create your own adventure game
-          </li>
-          <li class=" project-item">
-            terminal game
-          </li>
-        </ul>
-        <p class="button" id="menu-1">see more!</p> -->
 
-    
-      
-      
+    <section>
 
-      </section>
+      <ul class="about-me">
+        <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+        <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+        <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+      </ul>
 
-  <div class="container reveal fade-bottom">
-  <h2>Caption</h2>
-  <div class="text-container">
-    <div class="text-box">
-      <h3>Section Text</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-        eius molestiae perferendis eos provident vitae iste.
-      </p>
-    </div>
-      <section class="resume">
-        <h1> resume </h1>
+      <br>
+      <ul class="about-me">
+        <li>problem solver </li>
+        <li>critical thinker</li>
+        <li>entrepreneur</li>
+      </ul>
+      <p>located in Bay Area, California - I am passionate problem solver!</p>
+
+    </section>
+
+    <nav class="default-center">
+      <ul>
+      <li> <a href="mailto:kathleendiep@gmail.com">Email</a></li>
+      <li><a href="https://github.com/kathleendiep">Github</a></li>
+      <li><a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </main>
+      <section>
+        <h1>SKILLS</h1>
+        <div class="skills">
+        <div id="skills-button">FRONTEND</div>
+        <div id="skills-button">BACKEND</div>
+        <div id="skills-list"> HTML, CSS, JAVASCRIPT </div>
+      </div>
       </section>
-      <section class="fun">
-        <h1> fun facts </h1>
-      </section>
+        <section class = "projects">
+          <h1> Check out my projects! </h1>
+          <ul class="project-list">
+            <li class="project-item">
+              <h1>developed my own website for my own business!</h1>
+              <div id="project-button-1">arrow!</div>
+              <div id="personal-website"> developed front end, html, css, etc </div>
+            </li>
+            <li class=" project-item">
+              create your own adventure game
+            </li>
+            <li class=" project-item">
+              terminal game
+            </li>
+          </ul>
+          <p class="button" id="menu-1">see more!</p> -->
+
       
-      <div id="footer"></div>
-</body>
+        
+        
+
+        </section>
+
+    <div class="container reveal fade-bottom">
+    <h2>Caption</h2>
+    <div class="text-container">
+      <div class="text-box">
+        <h3>Section Text</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          eius molestiae perferendis eos provident vitae iste.
+        </p>
+      </div>
+        <section class="resume">
+          <h1> resume </h1>
+        </section>
+        <section class="fun">
+          <h1> fun facts </h1>
+        </section>
+          
+    <footer>
+    </footer>
+  </body>
 </html>

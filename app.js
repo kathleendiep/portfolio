@@ -4,13 +4,12 @@ console.log("LINKED");
 
 $(document).ready(function(){
     console.log('ready')
-
-
+    $('header').load('header.html');
+    $('footer').load('footer.html');
 
     document.getElementById('menu-1').addEventListener('click', function(){
     document.getElementById('big-menu').classList.add('toggle-open');
     console.log("LINKED");
-
     })
 
     document.getElementById('big-menu-close').addEventListener('click', function(){
@@ -21,8 +20,7 @@ $(document).ready(function(){
         document.getElementById('project-menu-details').classList.add('toggle-open');
     })
 
-    $('#header').load('header.html');
-    $('#footer').load('footer.html');
+    
 
  //function   
     const openDetails = () => {
@@ -34,11 +32,10 @@ $(document).ready(function(){
         $( `.project-item` ).addClass("hover-project");
 
     }
- 
+
 
 
 $(()=>{
-
     $('#project-button-1').on('click', openDetails);
     $('#project-button-1').on('hover', hoverDetails);
   });
