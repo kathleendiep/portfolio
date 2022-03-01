@@ -14,13 +14,23 @@ https://kathleendiep.github.io/portfolio/
     when clicking over the "hamburger" icon, the menu will appear
 
 
-2. when clicking on skills, the skillsets show
+2. when hovering over on skills, the skillsets show by using
+- addClass (to make content opacity:1)
+- fadeIn
+- fadeOut
 
 
-3. 
 
+3. when clicking on projects button, accordion style info opens up. 
 
+if ( $(`#infoOnWeb`).is(":hidden")) {
+    $(`#infoOnWeb`).slideDown("slow");
+    } else {
+        $(`#infoOnWeb`).hide();
+    }   
+}
 
 
 
 # UNSOLVED PROBLEMS
+1. having content load responsively when user scrolls down. 
