@@ -147,7 +147,6 @@ header{
   }
 }
 .goldengate{
-
   max-width: 100%;
   height: 200px;
 }
@@ -158,7 +157,7 @@ header{
   border: 6px solid white;
   height: auto;
   margin: -50px 0px 0px 0px;
-
+  padding: 10px;
 }
 
  .default-center {
@@ -221,18 +220,37 @@ h1{
 }
 
 
-#skills-button{
+#skills-button1{
   display: inline;
   background-color: white;
   color: #FAC08E; 
   cursor: pointer;
   font-size: 20px;
-
   text-transform: uppercase;
   text-align: center;
   height: 100px;
 
 }
+#skills-button1.hide{
+  opacity: 0;
+}
+
+#skills-button2{
+  display: inline;
+  background-color: white;
+  color: #FAC08E; 
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  height: 100px;
+
+}
+#skills-button2.hide{
+  opacity: 0;
+
+}
+
 
 #skills-list{
   background-color: white;
@@ -258,6 +276,16 @@ h1{
 .front-end.addDetails{
   background-color: grey;
   opacity:1;
+  margin: -20px 0px 0px 0px;
+}
+
+.back-end{
+  opacity:0;
+}
+.back-end.addDetails{
+  background-color: grey;
+  opacity:1;
+  margin: -20px 0px 0px 0px;
 }
 
 /* PROJECTS  */
@@ -268,55 +296,51 @@ h1{
 
 .project-list{
   display: flex;
-  flex-direction: row;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-around;
-  border: 5px solid white;
-  margin: 0;
-  padding: 100px;
-}
+  align-items: center;
+  flex-direction: column;
+  border: 6px solid white;
+  height: auto;
+  max-width: 100%;
+  padding: 10px;
 
-@media (min-width: 480px) {
-  .introduction{
+}
+@media (min-width: 480px){
+  .project-list{
     display: flex;
     flex-direction: row;
-    grid-template-columns: repeat(1fr, 1fr);
-    align-items: center;
-    border: 6px solid white;
-    margin: 10px 200px 15px 200px
+    justify-content: space-around;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    max-width: 100%;
+    height: 300px;
+    padding: 10px;
   }
 }
-
-@media (min-width: 1200px) {
-  .introduction{
-    display: flex;
-    flex-direction: row;
-    grid-template-columns: repeat(1fr, 1fr);
-    align-items: center;
-    border: 6px solid white;
-    margin: 20px 300px 15px 300px
-  }
-} */
-
-
-
-
+ /* at less than mobile */
 .project-item{
   display: flex; 
-  justify-content: space-around;
   flex-direction: column;
-  border: 2px solid white;
-  margin: 0 15px;
-  padding: 100px;
-  width: 500px;
+  border: 2px solid blue;
+  height: 200px;
+  width: 300px;
+  margin: 10px;
+}
+.project-item h1{
+  background-color: purple;
   height: 100px;
 }
 
 
+ /* more than mobile*/
+ @media (min-width: 480px){
+  .project-item{
+    display: flex;
+    width: 400px;
+    height: 100%;
+  }
+}
 
 
 #project-button-1{
-  display: inline;
   background-color: white;
   color: #FAC08E; 
   cursor: pointer;
@@ -324,19 +348,20 @@ h1{
   padding: 0px 30px;
   text-transform: uppercase;
   text-align: center;
-  height: 100%;
+  height: 10px;
   width: 50px;
+
 }
 
 #personal-website{
-  background-color: white;
+  opacity:0;
+  /* background-color: white;
   color: black;
-  opacity: 1;
+  opacity: 0;
   overflow-y: scroll;
   position: fixed;
   transition: 0.45s ease-in;
-  transform: translateX(0);
-
+  transform: translateX(0); */
 }
 #personal-website.toggle-open {
   transform: translateY(100%);
@@ -376,81 +401,79 @@ h1{
       console.log('body')
       </script>
       
-  <header>
-  </header>
+    <header>
+    </header>
 
 
-  <main>
-    <section>
-    <div class="introduction">
-    <h2 class="animate__animated animate__backInLeft">Hello! my name is: <br> Kathleen Diep </h2><br>
-
-    <img class="animate__animated animate__bounceInRight profilepic" src ="./images/profilephoto.png">
-
-    </div>
-    </section>
-
-    <section>
-
-      <ul class="about-me">
-        <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
-        <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
-        <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
-      </ul>
-
-      <br>
-      <ul class="about-me">
-        <li>problem solver </li>
-        <li>critical thinker</li>
-        <li>entrepreneur</li>
-      </ul>
-      <p>located in Bay Area, California - I am passionate problem solver!</p>
-
-    </section>
-
-    <nav class="default-center">
-      <ul>
-      <li> <a href="mailto:kathleendiep@gmail.com">Email</a></li>
-      <li><a href="https://github.com/kathleendiep">Github</a></li>
-      <li><a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a></li>
-      </ul>
-    </nav>
-  </main>
+    <main>
       <section>
-        <h1>SKILLS</h1>
-        <div class="skills">
-        <div id="skills-button">
-          <h1>FRONTEND</h1>
-          <div class="front-end"> HTML, CSS, JAVASCRIPT </div>
-        </div>
+      <div class="introduction">
+      <h2 class="animate__animated animate__backInLeft">Hello! my name is: <br> Kathleen Diep </h2><br>
 
-        <div id="skills-button">BACKEND</div>
-        <div id="skills-list"> HTML, CSS, JAVASCRIPT </div>
+      <img class="animate__animated animate__bounceInRight profilepic" src ="./images/profilephoto.png">
+
       </div>
       </section>
-        <section class = "projects">
-          <h1> Check out my projects! </h1>
-          <ul class="project-list">
-            <li class="project-item">
-              <h1>developed my own website for my own business!</h1>
-              <div id="project-button-1">arrow!</div>
-              <div id="personal-website"> developed front end, html, css, etc </div>
-            </li>
-            <li class=" project-item">
-              create your own adventure game
-            </li>
-            <li class=" project-item">
-              terminal game
-            </li>
-          </ul>
-          <p class="button" id="menu-1">see more!</p> -->
 
-      
-        
-        
+      <section>
+        <ul class="about-me">
+          <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+          <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+          <li><img class="animate__animated animate__bounceInRight goldengate" src ="./images/goldengate.png"> </li>
+        </ul>
+        <br>
+        <ul class="about-me">
+          <li>problem solver </li>
+          <li>critical thinker</li>
+          <li>entrepreneur</li>
+        </ul>
+        <p>located in Bay Area, California - I am passionate problem solver!</p>
+      </section>
 
-        </section>
+      <nav class="default-center">
+        <ul>
+        <li> <a href="mailto:kathleendiep@gmail.com">Email</a></li>
+        <li><a href="https://github.com/kathleendiep">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/kathleen-diep/">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </main>
+    <section>
+      <h1>SKILLS</h1>
+      <h4>scroll over to <i>learn more</i>!</h4>
+      <div class="skills">
+      <div id="skills-button1">
+        <h1>FRONTEND</h1>
+        <div class="front-end"> HTML, CSS, JAVASCRIPT, API </div>
+      </div>
 
+      <div id="skills-button2">
+        <h1>BACKEND</h1>
+        <div class="back-end"> to be learned!</div>
+      </div>
+    </section>
+
+    <section class = "projects">
+      <h1> Check out my projects! </h1>
+      <div class="project-list">
+        <div class=" project-item">
+          <h1>e-commerce web</h1>
+
+          <div id="personal-website"> developed front end, html, css, etc </div>
+        </div>
+        <div class="col-xs-12 project-item">
+          <h1>create your own adventure game</h1>
+          <div class="col-xs-12 text-center button">arrow!</div>
+
+        </div>
+
+        <div class="project-item">
+          <h1>terminal game</h1>
+
+          <div id="personal-website"> developed front end, html, css, etc </div>
+        </div>
+      </div>
+    </section> 
     <div class="container reveal fade-bottom">
     <h2>Caption</h2>
     <div class="text-container">
