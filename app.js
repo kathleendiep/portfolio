@@ -21,6 +21,7 @@ $(document).ready(function(){
     //     document.getElementById('project-menu-details').classList.add('toggle-open');
     // })
 
+
 // for button1 - front end 
     //hover over
     const hoverOver1= () => {
@@ -41,16 +42,54 @@ $(document).ready(function(){
     const hoverOut2= () => {
         $( this ).find( `.back-end`).fadeOut( "slow");
     }
- //function   
-    const openDetails = () => {
-        document.getElementById('personal-website').classList.add('toggle-open');
-        $( `#personal-website` ).appendTo$(`#project-button-1`);
+
+//projectbutton1
+ const openDetails = () => {
+if ( $(`#infoOnWeb`).is(":hidden")) {
+    $(`#infoOnWeb`).slideDown("slow");
+    } else {
+        $(`#infoOnWeb`).hide();
+    }   
+}
+//projectbutton2
+const openDetails2 = () => {
+    if ( $(`#infoOnWeb2`).is(":hidden")) {
+        $(`#infoOnWeb2`).slideDown("slow");
+        } else {
+            $(`#infoOnWeb2`).hide();
+        }   
     }
+    
+
+//projectbutton3
+const openDetails3 = () => {
+    if ( $(`#infoOnWeb3`).is(":hidden")) {
+        $(`#infoOnWeb3`).slideDown("slow");
+        } else {
+            $(`#infoOnWeb3`).hide();
+        }   
+    }
+// const openDetailsOfProject = (nameOfID) => {
+//     if ( $(nameOfID).is(":hidden")) {
+//         $(nameOfID).slideDown("slow");
+//         } else {
+//             $(nameOfID).hide();
+//         }   
+//     }
+ //function   
+    // const openDetails = () => {
+    //     document.getElementById('personal-website').classList.add('toggle-open');
+    //     $( `#personal-website` ).appendTo$(`#project-button-1`);
+    // }
 
 $(()=>{
-    $('#project-button-1').on('click', openDetails);
+    // $('#project-button-1').on('click', openDetails);
     $( `#skills-button1` ).hover(hoverOver1,hoverOut1); 
     $( `#skills-button2` ).hover(hoverOver2,hoverOut2); 
+    $(`.project-button-1`).on('click', openDetails);
+    $(`.project-button-2`).on('click', openDetails2);
+    $(`.project-button-3`).on('click', openDetails3);
+    // $(`.project-button-2`).on('click', openDetailsOfProject(#infoOnWeb));
   });
 
 })
