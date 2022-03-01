@@ -17,17 +17,30 @@ $(document).ready(function(){
     $('footer').load('footer.html');
 
 
+
     document.getElementById('project-button-1').addEventListener('click', function(){
         document.getElementById('project-menu-details').classList.add('toggle-open');
     })
 
     
+  //hover over
+    const hoverOver= () => {
+        $( `.front-end` ).addClass('addDetails');
+        $( `.front-end` ).appendTo$(`#skills-button`);
+      
+    }
+//hover out
+    const hoverOut= () => {
+        $( this ).find( ".front-end" ).remove();
+
+    }
 
  //function   
     const openDetails = () => {
         document.getElementById('personal-website').classList.add('toggle-open');
         $( `#personal-website` ).appendTo$(`#project-button-1`);
     }
+
     const hoverDetails = () => {
 
         $( `.project-item` ).addClass("hover-project");
@@ -39,6 +52,7 @@ $(document).ready(function(){
 $(()=>{
     $('#project-button-1').on('click', openDetails);
     $('#project-button-1').on('hover', hoverDetails);
+    $( `#skills-button` ).hover(hoverOver,hoverOut);
   });
 
 })
