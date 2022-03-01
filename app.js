@@ -5,6 +5,8 @@ console.log("LINKED");
 $(document).ready(function(){
     console.log('ready')
 
+
+
     document.getElementById('menu-1').addEventListener('click', function(){
     document.getElementById('big-menu').classList.add('toggle-open');
     console.log("LINKED");
@@ -18,6 +20,10 @@ $(document).ready(function(){
     document.getElementById('project-button-1').addEventListener('click', function(){
         document.getElementById('project-menu-details').classList.add('toggle-open');
     })
+
+    $('#header').load('header.html');
+    $('#footer').load('footer.html');
+
  //function   
     const openDetails = () => {
         document.getElementById('personal-website').classList.add('toggle-open');
