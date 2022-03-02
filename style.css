@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family=Pacifico&display=swap');
 body{
-    background-color:#FAC08E; 
+    background-color:#A52B31;
     color: white;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -23,13 +23,27 @@ header{
   cursor: pointer;
   font-size: 20px;
   margin: 10px auto;
-  padding: 0px 30px;
+  padding: 0px 30 0px 30px;
   text-transform: uppercase;
   text-align: center;
-  width: 50px;
-  border: 2px solid black;
+  width: 150px;
+  border-radius: 10%;
 }
 
+
+.button-contact a{
+  background-color:   #FFF6DE;
+  color: #A52B31; 
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-radius: 10%;
+}
 .button a{
     background-color: white;
     color: black;
@@ -37,8 +51,10 @@ header{
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
-    width: 150px;
-  }
+    width: 200px;
+    text-decoration: none;
+
+}
 /* MENU TOP BAR */
 
 #menu-1 img {
@@ -122,6 +138,7 @@ h1.spaceOfName{
   flex-direction: column;
   height: auto;
   grid-template-columns: 1fr;
+
 }
 
 @media (min-width: 480px) {
@@ -183,6 +200,22 @@ h1.spaceOfName{
   width: 100%;
   height: 100px;
 }
+.applepic{
+  width: 200px;
+  height: 300px;
+  margin: -75px;
+}
+
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+  margin: -50px 0px 0px 0px;
+  padding: 10px;
+  background-color: #DFB498;
+}
 .about-me {
   display: flex;
   align-items: center;
@@ -190,12 +223,16 @@ h1.spaceOfName{
   height: auto;
   margin: -50px 0px 0px 0px;
   padding: 10px;
+  background-color: #DFB498;
 }
 .about-me-header.h1{
   font-size: 20px;
-  border: 6px solid white;
   text-align: center;
   margin-bottom: -10px;
+}
+
+.about-me-header{
+  color: #81664E;
 }
 .about-me-para{
   text-align: center;
@@ -207,20 +244,19 @@ h1.spaceOfName{
 }
  .default-center {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border: 6px solid white;
   height: auto;
-
 }
 
 
 /* DIRECTORY - body */
 
 nav {
-background-color: grey;
-border: 6px solid white;
+
 align-items: center;
+color: #81664E;
 }
 
 p{
@@ -233,20 +269,28 @@ ul {
   align-items: center;
   flex-direction: row;
   grid-gap: 0px 10px; 
+ 
+}
+
+nav a{
+  color: #81664E;
+  text-decoration: none;
 }
 li {
   display: inline;
+
 }
 
 .default-center {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: 6px solid white;
   height: auto;
   margin: 0px 0px 0px 0px;
 
 }
+
+
 
 h1{
   text-align: center;
@@ -260,14 +304,13 @@ h1{
   justify-content: space-around;
   flex-direction: row;
   grid-gap: 0px 10px; 
-
 }
 
 
 #skills-button1{
   display: inline;
   background-color: white;
-  color: #FAC08E; 
+  color: #A52B31;
   cursor: pointer;
   font-size: 20px;
   text-transform: uppercase;
@@ -282,7 +325,7 @@ h1{
 #skills-button2{
   display: inline;
   background-color: white;
-  color: #FAC08E; 
+  color: #A52B31;
   cursor: pointer;
   font-size: 20px;
   text-transform: uppercase;
@@ -298,7 +341,6 @@ h1{
 
 #skills-list{
   background-color: white;
-  color: red;
   opacity: 0;
   overflow-y: scroll;
   position: fixed;
@@ -314,11 +356,20 @@ h1{
 
 }
 
+.skills-list{
+    align-items: center;
+    flex-direction: row;
+    grid-gap: 0px 10px; 
+  }
+  
+
+
 .front-end{
   opacity:0;
 }
 .front-end.addDetails{
-  background-color: grey;
+  background-color: #DFB498;
+  color: white;
   opacity:1;
   margin: -20px 0px 0px 0px;
 }
@@ -327,8 +378,9 @@ h1{
   opacity:0;
 }
 .back-end.addDetails{
-  background-color: grey;
+  background-color: #DFB498;
   opacity:1;
+  color: white;
   margin: -20px 0px 0px 0px;
 }
 
@@ -342,7 +394,7 @@ h1{
   display: flex;
   align-items: center;
   flex-direction: column;
-    background-color: white;
+  
   height: 75px;
   max-width: 100%;
   padding: 10px;
@@ -377,14 +429,16 @@ color: black;
 
 #infoOnWeb2{
 display: none;
+color: black;
 }
 
 #infoOnWeb3{
 display: none;
+color: black;
 }
 
 .project-item h1{
-  background-color: purple;
+  background-color: #A2ABCE;
   height: 100px;
 }
 
@@ -439,4 +493,36 @@ display: none;
   opacity: 1;
   position: relative;
   padding: 15px 30px;
+}
+/* for icons at bottom */
+
+
+.icons-header{
+
+}
+
+/* BIO */
+/*  */
+.bio-icons {
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin: 10px 0px 0px 0px;
+
+}
+.bio-icons img{
+  border-radius: 40%;
+}
+
+bio-header{
+color: white;
+
+}
+/* resume */
+
+.resume-workexperience{
+  text-align: left;
+}
+.resume-workexperience p{
+  text-align: left;
 }
