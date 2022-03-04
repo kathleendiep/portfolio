@@ -221,7 +221,7 @@ h1.spaceOfName{
   align-items: center;
   justify-content: space-around;
   height: auto;
-  margin: -50px 0px 0px 0px;
+  margin: -50px -10px 0px -10px;
   padding: 10px;
   background-color: #DFB498;
 }
@@ -394,11 +394,8 @@ h1{
   display: flex;
   align-items: center;
   flex-direction: column;
-  
-  height: 75px;
   max-width: 100%;
   padding: 10px;
-
 }
 @media (min-width: 480px){
   .project-list{
