@@ -1,0 +1,16 @@
+.button {
+    width: 35%;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    background: linear-gradient(#af96d4, #9b88b9);
+    cursor: pointer;
+    padding: 13px 20px;
+}
+.button:hover{
+    background-color: white;
+}
+    
+.text-link {
+    text-decoration: inherit;
+}

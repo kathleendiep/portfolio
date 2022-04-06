@@ -59,8 +59,9 @@ const openDetails2 = () => {
             $(`#infoOnWeb2`).hide();
         }   
     }
-    
-
+// 1. make the function
+// 2. refer to function in here:
+//$(`.project-button-3`).on('click', openDetails3);
 //projectbutton3
 const openDetails3 = () => {
     if ( $(`#infoOnWeb3`).is(":hidden")) {
@@ -69,18 +70,6 @@ const openDetails3 = () => {
             $(`#infoOnWeb3`).hide();
         }   
     }
-// const openDetailsOfProject = (nameOfID) => {
-//     if ( $(nameOfID).is(":hidden")) {
-//         $(nameOfID).slideDown("slow");
-//         } else {
-//             $(nameOfID).hide();
-//         }   
-//     }
- //function   
-    // const openDetails = () => {
-    //     document.getElementById('personal-website').classList.add('toggle-open');
-    //     $( `#personal-website` ).appendTo$(`#project-button-1`);
-    // }
 
 $(()=>{
     // $('#project-button-1').on('click', openDetails);

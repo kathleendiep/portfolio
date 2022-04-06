@@ -1,0 +1,56 @@
+/* to fit in mobile */
+
+.voyager-single-component{
+    display: grid;
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr); 
+}
+/* small screen */
+@media(min-width: 960px){
+    .voyager-single-component{
+      grid-template-columns: repeat(3, 1fr); 
+    }
+}
+.cards {
+    display: grid;
+    grid-gap: 32px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  
+  .card {
+    background: #fff;
+    border: 2px solid #928c8c;
+    border-radius: 8px;
+    transition: all 300ms ease;
+  }
+   .card:hover{
+      transform: scale(1.008) translateY(-5px);
+      box-shadow: 0 8px 20px 0 rgba(0,0,0,.15), 0 1px 2px 0 rgba(0,0,0,.16);
+   }
+/* JS/REACT */ 
+/* this is for 2 iphone/ipad - and 3 for laptop and above */
+<span className="voyager-single-component">
+        <div class="cards">
+        <div class="card">
+            <div class="img"></div>
+            <div class="card__body">
+            <div class="card__color-picker">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h3 class="card__title">Vinta Backpack</h3>
+            <p class="card__desc">Heritage style meets modern aesthetics</p>
+            </div>
+            <div class="card__footer">
+            <div class="card__price">
+                $125.00
+            </div>
+        </div> 
+
+</span>
